@@ -48,11 +48,11 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_3.5s_ease-in-out_infinite_2s]"></div>
       </div>
       
-      {/* Login Button - Top Right */}
+      {/* Login Button - Top Right with slower animation */}
       <div className="absolute top-6 right-6 z-20">
         <Button 
           variant="outline" 
-          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 hover:scale-110 transition-all duration-300 animate-[float_4s_ease-in-out_infinite]"
+          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-700 ease-in-out hover:scale-105 animate-[gentle-float_8s_ease-in-out_infinite]"
         >
           <LogIn className="mr-2 h-4 w-4" />
           Login
