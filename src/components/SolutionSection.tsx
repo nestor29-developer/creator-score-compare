@@ -1,11 +1,13 @@
 
-import { CheckCircle, Zap, Brain, BarChart3, Search, Filter, Heart, Star, ThumbsUp, AlertTriangle } from "lucide-react";
+import { CheckCircle, Zap, Brain, BarChart3, Search, Filter, Heart, Star, ThumbsUp, AlertTriangle, ArrowRight } from "lucide-react";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import { Button } from "@/components/ui/button";
 
 const SolutionSection = () => {
   const { ref: sectionRef, hasIntersected } = useIntersectionObserver();
   const { ref: tableRef, hasIntersected: tableVisible } = useIntersectionObserver();
   const { ref: benefitsRef, hasIntersected: benefitsVisible } = useIntersectionObserver();
+  const { ref: statsRef, hasIntersected: statsVisible } = useIntersectionObserver();
 
   return (
     <div ref={sectionRef} className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -17,14 +19,17 @@ const SolutionSection = () => {
               See What Creators Really Think
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> About Any Product</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
               Compare insights from multiple creators instantly. No more watching hours of videos or reading endless reviews.
+            </p>
+            <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+              Make smarter purchasing decisions with our AI-powered platform that analyzes creator insights and helps you choose products that truly work for you.
             </p>
           </div>
           
-          {/* Product Analysis Card - Cleaner Design */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Product Analysis Table matching your design */}
+          {/* Product Analysis Card - Updated Design */}
+          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+            {/* Left Side - Product Analysis Table */}
             <div ref={tableRef} className={`relative transition-all duration-1000 delay-300 ${tableVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <div className="bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 hover:shadow-3xl transition-all duration-700 hover:scale-[1.02]">
                 <div className="space-y-6">
@@ -39,8 +44,8 @@ const SolutionSection = () => {
                   {/* Table Header */}
                   <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 rounded-xl font-bold text-gray-700 text-sm border-b-2 border-gray-200">
                     <div>Creator</div>
-                    <div>Rating</div>
-                    <div>Review</div>
+                    <div>Sentiment</div>
+                    <div>Benefits</div>
                     <div>AI Analysis</div>
                   </div>
                   
@@ -50,12 +55,14 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Hyram" className="w-10 h-10 rounded-full border-2 border-green-300" />
                       <span className="font-bold text-green-900">Hyram</span>
                     </div>
-                    <div className="flex items-center">
-                      {[1,2,3,4,5].map(i => (
-                        <Star key={i} className="h-4 w-4 fill-green-500 text-green-500" />
-                      ))}
+                    <div className="flex items-center text-2xl">
+                      😍🥰✨
                     </div>
-                    <div className="text-green-800 font-medium">"Perfect for oily skin"</div>
+                    <div className="flex flex-wrap gap-1">
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Oil Control</span>
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Pore Minimizing</span>
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Affordable</span>
+                    </div>
                     <div className="flex items-center gap-2">
                       <Brain className="h-4 w-4 text-purple-600" />
                       <span className="text-purple-800 text-sm font-medium">Best for oil control</span>
@@ -68,15 +75,14 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="James Welsh" className="w-10 h-10 rounded-full border-2 border-yellow-300" />
                       <span className="font-bold text-yellow-900">James Welsh</span>
                     </div>
-                    <div className="flex items-center">
-                      {[1,2,3].map(i => (
-                        <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                      ))}
-                      {[4,5].map(i => (
-                        <Star key={i} className="h-4 w-4 text-gray-300" />
-                      ))}
+                    <div className="flex items-center text-2xl">
+                      😐⚠️💧
                     </div>
-                    <div className="text-yellow-800 font-medium">"Can be drying"</div>
+                    <div className="flex flex-wrap gap-1">
+                      <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Effective</span>
+                      <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Strong Formula</span>
+                      <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Needs Caution</span>
+                    </div>
                     <div className="flex items-center gap-2">
                       <Brain className="h-4 w-4 text-purple-600" />
                       <span className="text-purple-800 text-sm font-medium">Use with moisturizer</span>
@@ -89,30 +95,17 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Caroline" className="w-10 h-10 rounded-full border-2 border-orange-300" />
                       <span className="font-bold text-orange-900">Caroline</span>
                     </div>
-                    <div className="flex items-center">
-                      {[1,2,3].map(i => (
-                        <Star key={i} className="h-4 w-4 fill-orange-500 text-orange-500" />
-                      ))}
-                      {[4,5].map(i => (
-                        <Star key={i} className="h-4 w-4 text-gray-300" />
-                      ))}
+                    <div className="flex items-center text-2xl">
+                      😬🚫❌
                     </div>
-                    <div className="text-orange-800 font-medium">"Too strong for sensitive"</div>
+                    <div className="flex flex-wrap gap-1">
+                      <span className="bg-orange-200 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Too Strong</span>
+                      <span className="bg-orange-200 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Irritating</span>
+                      <span className="bg-orange-200 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Not for Sensitive</span>
+                    </div>
                     <div className="flex items-center gap-2">
                       <Brain className="h-4 w-4 text-purple-600" />
                       <span className="text-purple-800 text-sm font-medium">Avoid if sensitive</span>
-                    </div>
-                  </div>
-                  
-                  {/* Overall AI Summary */}
-                  <div className={`p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-l-4 border-purple-400 transition-all duration-500 ${tableVisible ? 'animate-[gentle-fade-in_0.8s_ease-out_1.1s_both]' : 'opacity-0'}`}>
-                    <div className="flex items-center gap-3 mb-4">
-                      <Brain className="h-6 w-6 text-purple-600" />
-                      <span className="font-bold text-purple-900 text-xl">🤖 Overall AI Summary</span>
-                    </div>
-                    <div className="text-purple-800 font-medium text-lg leading-relaxed">
-                      Best for oily/combination skin. Start with 2-3 times per week. 
-                      Avoid if you have sensitive skin or use retinoids.
                     </div>
                   </div>
                 </div>
@@ -154,6 +147,28 @@ const SolutionSection = () => {
                   <h3 className="text-lg font-semibold text-green-900 mb-2">Instant Results</h3>
                   <p className="text-green-700">No more watching hours of videos. Get comprehensive product analysis in seconds</p>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistics Section */}
+          <div ref={statsRef} className={`text-center py-16 transition-all duration-1000 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl p-12 text-white shadow-2xl">
+              <div className="max-w-2xl mx-auto">
+                <div className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent">
+                  90%
+                </div>
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                  Time Saved on Product Discovery
+                </h3>
+                <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+                  Join thousands of smart shoppers who've revolutionized how they discover products from creators. 
+                  Make smarter purchasing decisions with our platform that saves you hours of research.
+                </p>
+                <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1">
+                  Start Discovering Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
               </div>
             </div>
           </div>
