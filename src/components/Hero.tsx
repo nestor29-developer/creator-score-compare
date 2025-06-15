@@ -54,8 +54,8 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated Badge */}
-          <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* Animated Badge with gentle bounce */}
+          <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 animate-gentle-bounce ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <TrendingUp className="h-4 w-4 text-yellow-300 animate-pulse" />
             <span className="text-white/90 text-sm font-medium">🚀 Advanced AI-Powered Analysis</span>
           </div>
@@ -84,37 +84,37 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Feature Cards - 4 smaller cards with slower animations */}
+          {/* Feature Cards - 4 smaller cards with much slower animations */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className={`text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_20s_ease-in-out_infinite] delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-8 h-8 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Brain className="h-4 w-4 text-yellow-300" />
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_35s_ease-in-out_infinite] delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Brain className="h-3 w-3 text-yellow-300" />
               </div>
-              <div className="text-base font-semibold text-white mb-2">AI Analysis</div>
+              <div className="text-sm font-semibold text-white mb-1">AI Analysis</div>
               <div className="text-white/70 text-xs">Advanced algorithms process creator insights and deliver personalized recommendations</div>
             </div>
             
-            <div className={`text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_22s_ease-in-out_infinite_5s] delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-8 h-8 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Users className="h-4 w-4 text-blue-300" />
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_40s_ease-in-out_infinite_8s] delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-6 h-6 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Users className="h-3 w-3 text-blue-300" />
               </div>
-              <div className="text-base font-semibold text-white mb-2">Creator Insights</div>
+              <div className="text-sm font-semibold text-white mb-1">Creator Insights</div>
               <div className="text-white/70 text-xs">Real reviews from trusted creators with detailed breakdowns and honest opinions</div>
             </div>
             
-            <div className={`text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_18s_ease-in-out_infinite_2s] delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-8 h-8 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <Sparkles className="h-4 w-4 text-pink-300" />
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_32s_ease-in-out_infinite_4s] delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-6 h-6 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <Sparkles className="h-3 w-3 text-pink-300" />
               </div>
-              <div className="text-base font-semibold text-white mb-2">Instant Results</div>
+              <div className="text-sm font-semibold text-white mb-1">Instant Results</div>
               <div className="text-white/70 text-xs">Get detailed insights in seconds and save hours of research time</div>
             </div>
             
-            <div className={`text-center p-4 bg-white/5 backdrop-blur-sm rounded-xl hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_24s_ease-in-out_infinite_7s] delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-8 h-8 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-3">
-                <CheckCircle className="h-4 w-4 text-green-300" />
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_38s_ease-in-out_infinite_12s] delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-6 h-6 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
+                <CheckCircle className="h-3 w-3 text-green-300" />
               </div>
-              <div className="text-base font-semibold text-white mb-2">Smart Decisions</div>
+              <div className="text-sm font-semibold text-white mb-1">Smart Decisions</div>
               <div className="text-white/70 text-xs">Make confident purchases backed by comprehensive AI analysis</div>
             </div>
           </div>
