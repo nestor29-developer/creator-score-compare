@@ -50,17 +50,6 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_3.5s_ease-in-out_infinite_2s]"></div>
       </div>
       
-      {/* Login Button - Top Right with gentle animation */}
-      <div className="absolute top-6 right-6 z-20">
-        <Button 
-          variant="outline" 
-          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-500 ease-in-out hover:scale-105 animate-[gentle-float_20s_ease-in-out_infinite]"
-        >
-          <LogIn className="mr-2 h-4 w-4" />
-          Login
-        </Button>
-      </div>
-      
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -85,9 +74,9 @@ const Hero = () => {
             detailed breakdowns, benefits, ingredients, and reviews - all in one place.
           </p>
           
-          {/* Enhanced text about making better decisions */}
+          {/* Enhanced text about making better decisions - shortened */}
           <p className={`text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-900 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Make smarter purchasing decisions with confidence. Trust verified creator insights and AI-powered analysis to discover products that truly deliver results.
+            Make smarter purchasing decisions with confidence.
           </p>
           
           {/* CTA Button with enhanced animations */}
@@ -120,7 +109,7 @@ const Hero = () => {
                 <Sparkles className="h-8 w-8 text-pink-300" />
               </div>
               <div className="text-lg font-semibold text-white mb-2">Instant Results</div>
-              <div className="text-white/70 text-sm">Get detailed insights in seconds</div>
+              <div className="text-white/70 text-sm">Get detailed insights in seconds and save hours of research</div>
             </div>
           </div>
         </div>

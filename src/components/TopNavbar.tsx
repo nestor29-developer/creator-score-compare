@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Brain } from "lucide-react";
+import { Brain, LogIn } from "lucide-react";
 
 const TopNavbar = () => {
   return (
@@ -32,10 +32,19 @@ const TopNavbar = () => {
           </a>
         </div>
         
-        {/* CTA Button */}
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-          Get Started
-        </Button>
+        {/* Login and CTA Buttons */}
+        <div className="flex items-center gap-3">
+          <Button 
+            variant="outline" 
+            className="border-purple-200 text-purple-600 hover:bg-purple-50 px-4 py-2 rounded-full transition-all duration-300 hover:scale-105"
+          >
+            <LogIn className="mr-2 h-4 w-4" />
+            Login
+          </Button>
+          <Button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+            Get Started
+          </Button>
+        </div>
       </div>
     </nav>
   );
