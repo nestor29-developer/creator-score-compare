@@ -48,14 +48,6 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_3.5s_ease-in-out_infinite_2s]"></div>
       </div>
       
-      {/* Login Button - Top Right */}
-      <div className="absolute top-6 right-6 z-20">
-        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
-          <LogIn className="mr-2 h-4 w-4" />
-          Login
-        </Button>
-      </div>
-      
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20 pb-16">
         <div className="max-w-4xl mx-auto text-center">
