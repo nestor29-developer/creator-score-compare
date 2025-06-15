@@ -55,8 +55,8 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Hyram" className="w-10 h-10 rounded-full border-2 border-green-300" />
                       <span className="font-bold text-green-900">Hyram</span>
                     </div>
-                    <div className="flex items-center text-2xl">
-                      😍🥰✨
+                    <div className="flex items-center text-3xl">
+                      😍
                     </div>
                     <div className="flex flex-wrap gap-1">
                       <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Oil Control</span>
@@ -75,8 +75,8 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="James Welsh" className="w-10 h-10 rounded-full border-2 border-yellow-300" />
                       <span className="font-bold text-yellow-900">James Welsh</span>
                     </div>
-                    <div className="flex items-center text-2xl">
-                      😐⚠️💧
+                    <div className="flex items-center text-3xl">
+                      😐
                     </div>
                     <div className="flex flex-wrap gap-1">
                       <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">Effective</span>
@@ -95,8 +95,8 @@ const SolutionSection = () => {
                       <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Caroline" className="w-10 h-10 rounded-full border-2 border-orange-300" />
                       <span className="font-bold text-orange-900">Caroline</span>
                     </div>
-                    <div className="flex items-center text-2xl">
-                      😬🚫❌
+                    <div className="flex items-center text-3xl">
+                      😬
                     </div>
                     <div className="flex flex-wrap gap-1">
                       <span className="bg-orange-200 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Too Strong</span>
