@@ -69,14 +69,9 @@ const Hero = () => {
           </h1>
           
           {/* Subheadline */}
-          <p className={`text-xl md:text-2xl text-white/80 mb-4 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Skip the endless research! Our advanced AI analyzes creator recommendations and gives you 
             detailed breakdowns, benefits, ingredients, and reviews - all in one place.
-          </p>
-          
-          {/* Enhanced text about making better decisions - shortened */}
-          <p className={`text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-900 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            Make smarter purchasing decisions with confidence.
           </p>
           
           {/* CTA Button with enhanced animations */}
@@ -88,28 +83,28 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Key Features */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <Brain className="h-8 w-8 text-yellow-300" />
+          {/* New Feature Section - Similar to screenshot */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-20 h-20 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Brain className="h-10 w-10 text-yellow-300" />
               </div>
-              <div className="text-lg font-semibold text-white mb-2">AI Analysis</div>
-              <div className="text-white/70 text-sm">Advanced algorithms process creator insights</div>
+              <div className="text-2xl font-bold text-white mb-4">AI Analysis</div>
+              <div className="text-white/80 text-lg leading-relaxed">Advanced algorithms process creator insights and deliver personalized recommendations</div>
             </div>
-            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <Users className="h-8 w-8 text-blue-300" />
+            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="h-10 w-10 text-blue-300" />
               </div>
-              <div className="text-lg font-semibold text-white mb-2">Creator Insights</div>
-              <div className="text-white/70 text-sm">Real reviews from trusted creators</div>
+              <div className="text-2xl font-bold text-white mb-4">Creator Insights</div>
+              <div className="text-white/80 text-lg leading-relaxed">Real reviews from trusted creators with detailed breakdowns and honest opinions</div>
             </div>
-            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
-                <Sparkles className="h-8 w-8 text-pink-300" />
+            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-20 h-20 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Sparkles className="h-10 w-10 text-pink-300" />
               </div>
-              <div className="text-lg font-semibold text-white mb-2">Instant Results</div>
-              <div className="text-white/70 text-sm">Get detailed insights in seconds and save hours of research</div>
+              <div className="text-2xl font-bold text-white mb-4">Instant Results</div>
+              <div className="text-white/80 text-lg leading-relaxed">Get detailed insights in seconds and save hours of research time</div>
             </div>
           </div>
         </div>
