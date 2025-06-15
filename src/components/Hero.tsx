@@ -1,4 +1,5 @@
-import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn } from "lucide-react";
+
+import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn, Shield, Zap, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
@@ -83,8 +84,8 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* New Feature Section - Similar to screenshot */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Feature Section - Original smaller cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
             <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-20 h-20 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Brain className="h-10 w-10 text-yellow-300" />
@@ -105,6 +106,39 @@ const Hero = () => {
               </div>
               <div className="text-2xl font-bold text-white mb-4">Instant Results</div>
               <div className="text-white/80 text-lg leading-relaxed">Get detailed insights in seconds and save hours of research time</div>
+            </div>
+          </div>
+
+          {/* New Smart Purchasing Section */}
+          <div className="max-w-4xl mx-auto">
+            <h2 className={`text-3xl md:text-4xl font-bold text-white mb-12 transition-all duration-1000 delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              Make smarter purchasing decisions with confidence.
+            </h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className={`text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:scale-105 transition-all duration-500 delay-2000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-green-300" />
+                </div>
+                <div className="text-xl font-semibold text-white mb-3">Verified Reviews</div>
+                <div className="text-white/70 text-base">Only authentic creator recommendations with verified purchase history</div>
+              </div>
+              
+              <div className={`text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:scale-105 transition-all duration-500 delay-2200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Zap className="h-8 w-8 text-purple-300" />
+                </div>
+                <div className="text-xl font-semibold text-white mb-3">Instant Comparisons</div>
+                <div className="text-white/70 text-base">Compare products side-by-side with AI-powered analysis in seconds</div>
+              </div>
+              
+              <div className={`text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:scale-105 transition-all duration-500 delay-2400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                <div className="w-16 h-16 bg-orange-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Target className="h-8 w-8 text-orange-300" />
+                </div>
+                <div className="text-xl font-semibold text-white mb-3">Perfect Matches</div>
+                <div className="text-white/70 text-base">Find products that match your specific needs and preferences</div>
+              </div>
             </div>
           </div>
         </div>
