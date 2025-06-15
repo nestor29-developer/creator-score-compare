@@ -1,10 +1,13 @@
 
 import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const Hero = () => {
+  const { ref: heroRef, hasIntersected } = useIntersectionObserver();
+
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 overflow-hidden">
+    <div ref={heroRef} className="relative min-h-screen bg-gradient-to-br from-purple-600 via-blue-600 to-indigo-700 overflow-hidden">
       {/* Animated Background Pattern */}
       <div className="absolute inset-0 bg-black/10">
         <div className="absolute inset-0 opacity-40" style={{
@@ -48,11 +51,11 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_3.5s_ease-in-out_infinite_2s]"></div>
       </div>
       
-      {/* Login Button - Top Right with slower animation */}
+      {/* Login Button - Top Right with gentle animation */}
       <div className="absolute top-6 right-6 z-20">
         <Button 
           variant="outline" 
-          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-700 ease-in-out hover:scale-105 animate-[gentle-float_8s_ease-in-out_infinite]"
+          className="border-white/30 bg-white/10 text-gray-900 hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-500 ease-in-out hover:scale-105 animate-[gentle-float_12s_ease-in-out_infinite]"
         >
           <LogIn className="mr-2 h-4 w-4" />
           Login
@@ -63,28 +66,28 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 pt-20 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated Badge */}
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 animate-bounce">
+          <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <TrendingUp className="h-4 w-4 text-yellow-300 animate-pulse" />
             <span className="text-white/90 text-sm font-medium">🚀 Advanced AI-Powered Analysis</span>
           </div>
           
           {/* Main Headline with staggered animation */}
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-in">
-            <span className="block animate-[fade-in_0.8s_ease-out]">Get Instant</span>
-            <span className="block bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent animate-[fade-in_1.2s_ease-out]">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className={`block transition-all duration-1000 delay-200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Get Instant</span>
+            <span className={`block bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent transition-all duration-1000 delay-400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               AI-Analyzed
             </span>
-            <span className="block animate-[fade-in_1.6s_ease-out]">Product Insights from Creators</span>
+            <span className={`block transition-all duration-1000 delay-600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Product Insights from Creators</span>
           </h1>
           
           {/* Subheadline */}
-          <p className="text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed animate-[fade-in_2s_ease-out]">
+          <p className={`text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Skip the endless research! Our advanced AI analyzes creator recommendations and gives you 
             detailed breakdowns, benefits, ingredients, and reviews - all in one place.
           </p>
           
           {/* CTA Button with enhanced animations */}
-          <div className="flex justify-center items-center mb-16 animate-[fade-in_2.4s_ease-out]">
+          <div className={`flex justify-center items-center mb-16 transition-all duration-1000 delay-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 animate-pulse hover:animate-none relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">🎉 FREE Beta Access - Join Now!</span>
@@ -94,21 +97,21 @@ const Hero = () => {
           
           {/* Key Features */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center animate-[scale-in_1s_ease-out_2.6s_both] hover:scale-110 transition-transform duration-300">
+            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
                 <Brain className="h-8 w-8 text-yellow-300" />
               </div>
               <div className="text-lg font-semibold text-white mb-2">AI Analysis</div>
               <div className="text-white/70 text-sm">Advanced algorithms process creator insights</div>
             </div>
-            <div className="text-center animate-[scale-in_1s_ease-out_2.8s_both] hover:scale-110 transition-transform duration-300">
+            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
                 <Users className="h-8 w-8 text-blue-300" />
               </div>
               <div className="text-lg font-semibold text-white mb-2">Creator Insights</div>
               <div className="text-white/70 text-sm">Real reviews from trusted creators</div>
             </div>
-            <div className="text-center animate-[scale-in_1s_ease-out_3s_both] hover:scale-110 transition-transform duration-300">
+            <div className={`text-center hover:scale-110 transition-all duration-500 delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 backdrop-blur-sm">
                 <Sparkles className="h-8 w-8 text-pink-300" />
               </div>

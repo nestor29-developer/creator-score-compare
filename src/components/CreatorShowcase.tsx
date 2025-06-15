@@ -1,7 +1,12 @@
 
 import { Star, Users, TrendingUp, Play, Heart, Zap } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
+import CountingNumber from "./CountingNumber";
 
 const CreatorShowcase = () => {
+  const { ref: sectionRef, hasIntersected } = useIntersectionObserver();
+  const { ref: statsRef, hasIntersected: statsVisible } = useIntersectionObserver();
+
   const creators = [
     {
       name: "Abbey Yang",
@@ -42,7 +47,7 @@ const CreatorShowcase = () => {
   ];
 
   return (
-    <div className="py-20 bg-gray-900 relative overflow-hidden">
+    <div ref={sectionRef} className="py-20 bg-gray-900 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-40 h-40 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -52,12 +57,12 @@ const CreatorShowcase = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-fade-in">
+          <div className={`text-center mb-16 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Trusted by
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Expert Creators</span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-[fade-in_0.8s_ease-out]">
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Our platform features detailed reviews and insights from beauty and skincare experts who know products inside and out
             </p>
           </div>
@@ -67,7 +72,8 @@ const CreatorShowcase = () => {
             {creators.map((creator, index) => (
               <div 
                 key={index} 
-                className={`bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-300 hover:scale-105 hover:-translate-y-2 animate-[scale-in_0.5s_ease-out_${index * 0.2}s_both] ${creator.featured ? 'ring-2 ring-yellow-400/50' : ''}`}
+                className={`bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-purple-500 transition-all duration-500 hover:scale-105 hover:-translate-y-2 ${hasIntersected ? `opacity-100 translate-y-0` : 'opacity-0 translate-y-8'} ${creator.featured ? 'ring-2 ring-yellow-400/50' : ''}`}
+                style={{ transitionDelay: `${300 + index * 200}ms` }}
               >
                 {creator.featured && (
                   <div className="absolute -top-2 -right-2 bg-yellow-400 text-gray-900 text-xs font-bold px-2 py-1 rounded-full animate-bounce">
@@ -117,21 +123,27 @@ const CreatorShowcase = () => {
             ))}
           </div>
           
-          {/* Enhanced Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="animate-[scale-in_0.8s_ease-out_1s_both] hover:scale-110 transition-transform duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">12+</div>
+          {/* Enhanced Stats Section with counting numbers */}
+          <div ref={statsRef} className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className={`hover:scale-110 transition-all duration-500 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <CountingNumber end={12} suffix="+" trigger={statsVisible} />
+              </div>
               <div className="text-gray-400">Expert Creators</div>
             </div>
-            <div className="animate-[scale-in_0.8s_ease-out_1.2s_both] hover:scale-110 transition-transform duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">3K+</div>
+            <div className={`hover:scale-110 transition-all duration-500 delay-200 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <CountingNumber end={3000} suffix="+" trigger={statsVisible} duration={2500} />
+              </div>
               <div className="text-gray-400">Products Analyzed</div>
             </div>
-            <div className="animate-[scale-in_0.8s_ease-out_1.4s_both] hover:scale-110 transition-transform duration-300">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">100%</div>
+            <div className={`hover:scale-110 transition-all duration-500 delay-400 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <CountingNumber end={100} suffix="%" trigger={statsVisible} />
+              </div>
               <div className="text-gray-400">Free Access</div>
             </div>
-            <div className="animate-[scale-in_0.8s_ease-out_1.6s_both] hover:scale-110 transition-transform duration-300">
+            <div className={`hover:scale-110 transition-all duration-500 delay-600 ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">Beta</div>
               <div className="text-gray-400">Early Access</div>
             </div>

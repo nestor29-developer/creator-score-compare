@@ -1,18 +1,23 @@
 
 import { CheckCircle, Zap, Brain, BarChart3, Search, Filter, Heart, Star, ThumbsUp, AlertTriangle } from "lucide-react";
+import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
 
 const SolutionSection = () => {
+  const { ref: sectionRef, hasIntersected } = useIntersectionObserver();
+  const { ref: tableRef, hasIntersected: tableVisible } = useIntersectionObserver();
+  const { ref: benefitsRef, hasIntersected: benefitsVisible } = useIntersectionObserver();
+
   return (
-    <div className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
+    <div ref={sectionRef} className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 animate-fade-in">
+          <div className={`text-center mb-16 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               See What Creators Really Think
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> About Any Product</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-[fade-in_0.8s_ease-out]">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Compare insights from multiple creators instantly. No more watching hours of videos or reading endless reviews.
             </p>
           </div>
@@ -20,7 +25,7 @@ const SolutionSection = () => {
           {/* Product Analysis Card - Cleaner Design */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Side - Product Analysis Table matching your design */}
-            <div className="relative animate-[gentle-slide-in_1.2s_ease-out]">
+            <div ref={tableRef} className={`relative transition-all duration-1000 delay-300 ${tableVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}>
               <div className="bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 hover:shadow-3xl transition-all duration-700 hover:scale-[1.02]">
                 <div className="space-y-6">
                   {/* Search Bar */}
@@ -40,7 +45,7 @@ const SolutionSection = () => {
                   </div>
                   
                   {/* Creator 1 - Hyram */}
-                  <div className="grid grid-cols-4 gap-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-400 hover:bg-green-100 transition-colors duration-500 animate-[gentle-fade-in_0.8s_ease-out_0.2s_both]">
+                  <div className={`grid grid-cols-4 gap-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-400 hover:bg-green-100 transition-all duration-500 ${tableVisible ? 'animate-[gentle-fade-in_0.8s_ease-out_0.5s_both]' : 'opacity-0'}`}>
                     <div className="flex items-center gap-3">
                       <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Hyram" className="w-10 h-10 rounded-full border-2 border-green-300" />
                       <span className="font-bold text-green-900">Hyram</span>
@@ -58,7 +63,7 @@ const SolutionSection = () => {
                   </div>
                   
                   {/* Creator 2 - James Welsh */}
-                  <div className="grid grid-cols-4 gap-4 p-4 bg-yellow-50 rounded-xl border-l-4 border-yellow-400 hover:bg-yellow-100 transition-colors duration-500 animate-[gentle-fade-in_0.8s_ease-out_0.4s_both]">
+                  <div className={`grid grid-cols-4 gap-4 p-4 bg-yellow-50 rounded-xl border-l-4 border-yellow-400 hover:bg-yellow-100 transition-all duration-500 ${tableVisible ? 'animate-[gentle-fade-in_0.8s_ease-out_0.7s_both]' : 'opacity-0'}`}>
                     <div className="flex items-center gap-3">
                       <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="James Welsh" className="w-10 h-10 rounded-full border-2 border-yellow-300" />
                       <span className="font-bold text-yellow-900">James Welsh</span>
@@ -79,7 +84,7 @@ const SolutionSection = () => {
                   </div>
                   
                   {/* Creator 3 - Caroline */}
-                  <div className="grid grid-cols-4 gap-4 p-4 bg-orange-50 rounded-xl border-l-4 border-orange-400 hover:bg-orange-100 transition-colors duration-500 animate-[gentle-fade-in_0.8s_ease-out_0.6s_both]">
+                  <div className={`grid grid-cols-4 gap-4 p-4 bg-orange-50 rounded-xl border-l-4 border-orange-400 hover:bg-orange-100 transition-all duration-500 ${tableVisible ? 'animate-[gentle-fade-in_0.8s_ease-out_0.9s_both]' : 'opacity-0'}`}>
                     <div className="flex items-center gap-3">
                       <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Caroline" className="w-10 h-10 rounded-full border-2 border-orange-300" />
                       <span className="font-bold text-orange-900">Caroline</span>
@@ -100,7 +105,7 @@ const SolutionSection = () => {
                   </div>
                   
                   {/* Overall AI Summary */}
-                  <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-l-4 border-purple-400 animate-[gentle-fade-in_0.8s_ease-out_0.8s_both]">
+                  <div className={`p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-l-4 border-purple-400 transition-all duration-500 ${tableVisible ? 'animate-[gentle-fade-in_0.8s_ease-out_1.1s_both]' : 'opacity-0'}`}>
                     <div className="flex items-center gap-3 mb-4">
                       <Brain className="h-6 w-6 text-purple-600" />
                       <span className="font-bold text-purple-900 text-xl">🤖 Overall AI Summary</span>
@@ -114,14 +119,14 @@ const SolutionSection = () => {
               </div>
               
               {/* Floating success indicator */}
-              <div className="absolute -top-4 -right-4 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-[gentle-bounce_3s_ease-in-out_infinite]">
+              <div className={`absolute -top-4 -right-4 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center shadow-lg transition-all duration-500 delay-500 ${tableVisible ? 'opacity-100 scale-100 animate-[gentle-bounce_3s_ease-in-out_infinite]' : 'opacity-0 scale-0'}`}>
                 <CheckCircle className="h-8 w-8 text-white" />
               </div>
             </div>
             
             {/* Right Side - Benefits */}
-            <div className="space-y-6 animate-[gentle-fade-in_1s_ease-out_0.5s_both]">
-              <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] animate-[gentle-fade-in_0.8s_ease-out_1s_both]">
+            <div ref={benefitsRef} className="space-y-6">
+              <div className={`flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] ${benefitsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                   <BarChart3 className="h-6 w-6 text-blue-600" />
                 </div>
@@ -131,7 +136,7 @@ const SolutionSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] animate-[gentle-fade-in_0.8s_ease-out_1.2s_both]">
+              <div className={`flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] delay-200 ${benefitsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
                   <Brain className="h-6 w-6 text-purple-600" />
                 </div>
@@ -141,7 +146,7 @@ const SolutionSection = () => {
                 </div>
               </div>
               
-              <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] animate-[gentle-fade-in_0.8s_ease-out_1.4s_both]">
+              <div className={`flex items-start gap-4 p-6 bg-white rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] delay-400 ${benefitsVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
                 <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
                   <Zap className="h-6 w-6 text-green-600" />
                 </div>

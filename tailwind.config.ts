@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -116,6 +117,30 @@ export default {
 				'sparkle': {
 					'0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
 					'50%': { opacity: '1', transform: 'scale(1.2)' }
+				},
+				'gentle-float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-5px)' }
+				},
+				'gentle-fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'gentle-bounce': {
+					'0%, 100%': { 
+						transform: 'translateY(0px) scale(1)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': { 
+						transform: 'translateY(-5px) scale(1.05)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
 				}
 			},
 			animation: {
@@ -125,7 +150,10 @@ export default {
 				'scale-in': 'scale-in 0.4s ease-out',
 				'slide-in-right': 'slide-in-right 0.8s ease-out',
 				'float': 'float 6s ease-in-out infinite',
-				'sparkle': 'sparkle 4s ease-in-out infinite'
+				'sparkle': 'sparkle 4s ease-in-out infinite',
+				'gentle-float': 'gentle-float 12s ease-in-out infinite',
+				'gentle-fade-in': 'gentle-fade-in 0.8s ease-out',
+				'gentle-bounce': 'gentle-bounce 3s ease-in-out infinite'
 			}
 		}
 	},
