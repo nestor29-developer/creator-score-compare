@@ -1,3 +1,4 @@
+
 import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn, Shield, Zap, Target, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -83,69 +84,38 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Original Feature Section - Keep the 3 smaller cards exactly as they were */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-20 h-20 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Brain className="h-10 w-10 text-yellow-300" />
+          {/* Feature Cards - 4 smaller cards without borders */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:scale-105 hover:bg-white/15 transition-all duration-500 delay-1200 animate-gentle-float ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Brain className="h-6 w-6 text-yellow-300" />
               </div>
-              <div className="text-2xl font-bold text-white mb-4">AI Analysis</div>
-              <div className="text-white/80 text-lg leading-relaxed">Advanced algorithms process creator insights and deliver personalized recommendations</div>
+              <div className="text-lg font-semibold text-white mb-3">AI Analysis</div>
+              <div className="text-white/70 text-sm">Advanced algorithms process creator insights and deliver personalized recommendations</div>
             </div>
-            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-10 w-10 text-blue-300" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-4">Creator Insights</div>
-              <div className="text-white/80 text-lg leading-relaxed">Real reviews from trusted creators with detailed breakdowns and honest opinions</div>
-            </div>
-            <div className={`text-center p-8 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 hover:scale-105 transition-all duration-500 delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              <div className="w-20 h-20 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Sparkles className="h-10 w-10 text-pink-300" />
-              </div>
-              <div className="text-2xl font-bold text-white mb-4">Instant Results</div>
-              <div className="text-white/80 text-lg leading-relaxed">Get detailed insights in seconds and save hours of research time</div>
-            </div>
-          </div>
-
-          {/* New Smart Purchasing Section - 4 smaller cards */}
-          <div className="max-w-5xl mx-auto">
-            <h2 className={`text-3xl md:text-4xl font-bold text-white mb-12 transition-all duration-1000 delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-              Make smarter purchasing decisions with confidence.
-            </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:scale-105 transition-all duration-500 delay-2000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="w-16 h-16 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-green-300" />
-                </div>
-                <div className="text-lg font-semibold text-white mb-3">Verified Reviews</div>
-                <div className="text-white/70 text-sm">Only authentic creator recommendations with verified purchase history</div>
+            <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:scale-105 hover:bg-white/15 transition-all duration-500 delay-1400 animate-gentle-float ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-12 h-12 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-6 w-6 text-blue-300" />
               </div>
-              
-              <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:scale-105 transition-all duration-500 delay-2200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="w-16 h-16 bg-purple-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Zap className="h-8 w-8 text-purple-300" />
-                </div>
-                <div className="text-lg font-semibold text-white mb-3">Instant Comparisons</div>
-                <div className="text-white/70 text-sm">Compare products side-by-side with AI-powered analysis in seconds</div>
+              <div className="text-lg font-semibold text-white mb-3">Creator Insights</div>
+              <div className="text-white/70 text-sm">Real reviews from trusted creators with detailed breakdowns and honest opinions</div>
+            </div>
+            
+            <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:scale-105 hover:bg-white/15 transition-all duration-500 delay-1600 animate-gentle-float ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-12 h-12 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sparkles className="h-6 w-6 text-pink-300" />
               </div>
-              
-              <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:scale-105 transition-all duration-500 delay-2400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="w-16 h-16 bg-orange-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Target className="h-8 w-8 text-orange-300" />
-                </div>
-                <div className="text-lg font-semibold text-white mb-3">Perfect Matches</div>
-                <div className="text-white/70 text-sm">Find products that match your specific needs and preferences</div>
+              <div className="text-lg font-semibold text-white mb-3">Instant Results</div>
+              <div className="text-white/70 text-sm">Get detailed insights in seconds and save hours of research time</div>
+            </div>
+            
+            <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl hover:scale-105 hover:bg-white/15 transition-all duration-500 delay-1800 animate-gentle-float ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+              <div className="w-12 h-12 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                <CheckCircle className="h-6 w-6 text-green-300" />
               </div>
-              
-              <div className={`text-center p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 hover:scale-105 transition-all duration-500 delay-2600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                <div className="w-16 h-16 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="h-8 w-8 text-blue-300" />
-                </div>
-                <div className="text-lg font-semibold text-white mb-3">Smart Decisions</div>
-                <div className="text-white/70 text-sm">Make confident purchases backed by comprehensive AI analysis</div>
-              </div>
+              <div className="text-lg font-semibold text-white mb-3">Smart Decisions</div>
+              <div className="text-white/70 text-sm">Make confident purchases backed by comprehensive AI analysis</div>
             </div>
           </div>
         </div>
