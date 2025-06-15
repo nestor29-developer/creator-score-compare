@@ -15,47 +15,47 @@ const Hero = () => {
         }}></div>
       </div>
       
-      {/* Floating AI-themed elements with slower movement */}
+      {/* Floating AI-themed elements with much slower movement */}
       <div className="absolute inset-0 overflow-hidden">
         {/* AI Brain Icons */}
-        <div className="absolute top-1/4 left-10 animate-[float_12s_ease-in-out_infinite]">
+        <div className="absolute top-1/4 left-10 animate-[float_20s_ease-in-out_infinite]">
           <Brain className="h-8 w-8 text-white/20 animate-pulse" />
         </div>
-        <div className="absolute top-1/3 right-20 animate-[float_16s_ease-in-out_infinite_4s]">
+        <div className="absolute top-1/3 right-20 animate-[float_25s_ease-in-out_infinite_6s]">
           <Brain className="h-6 w-6 text-yellow-300/30 animate-pulse" />
         </div>
-        <div className="absolute bottom-1/4 left-1/4 animate-[float_14s_ease-in-out_infinite_2s]">
+        <div className="absolute bottom-1/4 left-1/4 animate-[float_22s_ease-in-out_infinite_3s]">
           <Brain className="h-10 w-10 text-blue-300/20 animate-pulse" />
         </div>
         
         {/* Creator/User Icons */}
-        <div className="absolute top-20 right-10 animate-[float_10s_ease-in-out_infinite_6s]">
+        <div className="absolute top-20 right-10 animate-[float_18s_ease-in-out_infinite_9s]">
           <Users className="h-7 w-7 text-pink-300/30 animate-pulse" />
         </div>
-        <div className="absolute bottom-20 right-1/3 animate-[float_18s_ease-in-out_infinite_3s]">
+        <div className="absolute bottom-20 right-1/3 animate-[float_28s_ease-in-out_infinite_5s]">
           <Users className="h-6 w-6 text-green-300/30 animate-pulse" />
         </div>
         
         {/* Star/Sparkle elements */}
-        <div className="absolute top-1/2 left-1/3 animate-[sparkle_8s_ease-in-out_infinite]">
+        <div className="absolute top-1/2 left-1/3 animate-[sparkle_15s_ease-in-out_infinite]">
           <Sparkles className="h-5 w-5 text-yellow-400/40" />
         </div>
-        <div className="absolute bottom-1/3 right-1/4 animate-[sparkle_12s_ease-in-out_infinite_4s]">
+        <div className="absolute bottom-1/3 right-1/4 animate-[sparkle_20s_ease-in-out_infinite_7s]">
           <Sparkles className="h-7 w-7 text-orange-300/30" />
         </div>
         
         {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400/30 rounded-full blur-xl animate-[pulse_6s_ease-in-out_infinite]"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-400/30 rounded-full blur-xl animate-[pulse_8s_ease-in-out_infinite_2s]"></div>
-        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-400/30 rounded-full blur-xl animate-[pulse_5s_ease-in-out_infinite_1s]"></div>
-        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_7s_ease-in-out_infinite_4s]"></div>
+        <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400/30 rounded-full blur-xl animate-[pulse_12s_ease-in-out_infinite]"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-400/30 rounded-full blur-xl animate-[pulse_16s_ease-in-out_infinite_4s]"></div>
+        <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-blue-400/30 rounded-full blur-xl animate-[pulse_10s_ease-in-out_infinite_2s]"></div>
+        <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_14s_ease-in-out_infinite_6s]"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Animated Badge with gentle bounce */}
-          <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 animate-gentle-bounce ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* Animated Badge with slower gentle bounce */}
+          <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 animate-[gentle-bounce_6s_ease-in-out_infinite] ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <TrendingUp className="h-4 w-4 text-yellow-300 animate-pulse" />
             <span className="text-white/90 text-sm font-medium">🚀 Advanced AI-Powered Analysis</span>
           </div>
@@ -84,9 +84,9 @@ const Hero = () => {
             </Button>
           </div>
           
-          {/* Feature Cards - 4 smaller cards with much slower animations */}
+          {/* Feature Cards - 4 cards with much slower animations */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_35s_ease-in-out_infinite] delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_50s_ease-in-out_infinite] delay-1200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-6 h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Brain className="h-3 w-3 text-yellow-300" />
               </div>
@@ -94,7 +94,7 @@ const Hero = () => {
               <div className="text-white/70 text-xs">Advanced algorithms process creator insights and deliver personalized recommendations</div>
             </div>
             
-            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_40s_ease-in-out_infinite_8s] delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_60s_ease-in-out_infinite_12s] delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-6 h-6 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Users className="h-3 w-3 text-blue-300" />
               </div>
@@ -102,7 +102,7 @@ const Hero = () => {
               <div className="text-white/70 text-xs">Real reviews from trusted creators with detailed breakdowns and honest opinions</div>
             </div>
             
-            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_32s_ease-in-out_infinite_4s] delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_45s_ease-in-out_infinite_6s] delay-1600 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-6 h-6 bg-pink-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
                 <Sparkles className="h-3 w-3 text-pink-300" />
               </div>
@@ -110,7 +110,7 @@ const Hero = () => {
               <div className="text-white/70 text-xs">Get detailed insights in seconds and save hours of research time</div>
             </div>
             
-            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_38s_ease-in-out_infinite_12s] delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div className={`text-center p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_55s_ease-in-out_infinite_18s] delay-1800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               <div className="w-6 h-6 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-2">
                 <CheckCircle className="h-3 w-3 text-green-300" />
               </div>
