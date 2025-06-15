@@ -1,4 +1,3 @@
-
 import { CheckCircle, Zap, Brain, BarChart3, Search, Filter, Heart, Star, ThumbsUp, AlertTriangle } from "lucide-react";
 
 const SolutionSection = () => {
@@ -17,9 +16,9 @@ const SolutionSection = () => {
             </p>
           </div>
           
-          {/* Product Analysis Card - Matching Screenshot Design */}
+          {/* Product Analysis Card - Table Design */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Side - Product Analysis Card */}
+            {/* Left Side - Product Analysis Table */}
             <div className="relative animate-[slide-in-right_1s_ease-out]">
               <div className="bg-white rounded-3xl p-8 shadow-2xl border border-blue-100 hover:shadow-3xl transition-all duration-500 hover:scale-105">
                 <div className="space-y-6">
@@ -31,86 +30,79 @@ const SolutionSection = () => {
                     <div className="flex-1 text-gray-800 font-medium text-lg">The Ordinary Niacinamide Serum</div>
                   </div>
                   
-                  {/* Creator Reviews - Table-like Design */}
-                  <div className="space-y-4">
-                    {/* Creator 1 - Hyram */}
-                    <div className="bg-green-50 rounded-2xl p-6 border-l-4 border-green-400">
-                      <div className="flex items-start gap-4">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" alt="Hyram" className="w-12 h-12 rounded-full border-2 border-green-200" />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="font-bold text-green-900 text-lg">Hyram</div>
-                            <div className="flex items-center gap-1">
-                              {[1,2,3,4,5].map(i => (
-                                <Star key={i} className="h-4 w-4 fill-green-500 text-green-500" />
-                              ))}
-                            </div>
-                          </div>
-                          <div className="text-green-800 font-medium mb-3 text-base">"Perfect for oily skin, reduces pore appearance"</div>
-                          <div className="flex gap-2 flex-wrap">
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full font-medium border border-green-200">✅ Oil Control</span>
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full font-medium border border-green-200">✅ Pore Minimizing</span>
-                          </div>
-                        </div>
-                      </div>
+                  {/* Table Header */}
+                  <div className="grid grid-cols-4 gap-4 p-4 bg-gray-50 rounded-xl font-semibold text-gray-700 text-sm">
+                    <div>Creator</div>
+                    <div>Rating</div>
+                    <div>Review</div>
+                    <div>AI Analysis</div>
+                  </div>
+                  
+                  {/* Creator 1 - Hyram */}
+                  <div className="grid grid-cols-4 gap-4 p-4 bg-green-50 rounded-xl border-l-4 border-green-400">
+                    <div className="flex items-center gap-2">
+                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face" alt="Hyram" className="w-8 h-8 rounded-full" />
+                      <span className="font-bold text-green-900 text-sm">Hyram</span>
                     </div>
-                    
-                    {/* Creator 2 - James Welsh */}
-                    <div className="bg-yellow-50 rounded-2xl p-6 border-l-4 border-yellow-400">
-                      <div className="flex items-start gap-4">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face" alt="James Welsh" className="w-12 h-12 rounded-full border-2 border-yellow-200" />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="font-bold text-yellow-900 text-lg">James Welsh</div>
-                            <div className="flex items-center gap-1">
-                              {[1,2,3].map(i => (
-                                <Star key={i} className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-                              ))}
-                              {[4,5].map(i => (
-                                <Star key={i} className="h-4 w-4 text-gray-300" />
-                              ))}
-                            </div>
-                          </div>
-                          <div className="text-yellow-800 font-medium mb-3 text-base">"Good ingredients but can be drying for some"</div>
-                          <div className="flex gap-2 flex-wrap">
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full font-medium border border-green-200">✅ Good Formula</span>
-                            <span className="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full font-medium border border-orange-200">⚠️ Can Be Drying</span>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="flex items-center">
+                      {[1,2,3,4,5].map(i => (
+                        <Star key={i} className="h-3 w-3 fill-green-500 text-green-500" />
+                      ))}
                     </div>
-                    
-                    {/* Creator 3 - Caroline Hirons */}
-                    <div className="bg-orange-50 rounded-2xl p-6 border-l-4 border-orange-400">
-                      <div className="flex items-start gap-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face" alt="Caroline Hirons" className="w-12 h-12 rounded-full border-2 border-orange-200" />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-3 mb-3">
-                            <div className="font-bold text-orange-900 text-lg">Caroline Hirons</div>
-                            <div className="flex items-center gap-1">
-                              {[1,2,3].map(i => (
-                                <Star key={i} className="h-4 w-4 fill-orange-500 text-orange-500" />
-                              ))}
-                              {[4,5].map(i => (
-                                <Star key={i} className="h-4 w-4 text-gray-300" />
-                              ))}
-                            </div>
-                          </div>
-                          <div className="text-orange-800 font-medium mb-3 text-base">"Start slow, too strong for sensitive skin"</div>
-                          <div className="flex gap-2 flex-wrap">
-                            <span className="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full font-medium border border-green-200">✅ Effective</span>
-                            <span className="px-3 py-1 bg-red-100 text-red-800 text-sm rounded-full font-medium border border-red-200">❌ Not for Sensitive</span>
-                          </div>
-                        </div>
-                      </div>
+                    <div className="text-green-800 text-sm font-medium">"Perfect for oily skin"</div>
+                    <div className="flex items-center gap-1">
+                      <Brain className="h-3 w-3 text-purple-600" />
+                      <span className="text-purple-800 text-xs font-medium">Best for oil control</span>
                     </div>
                   </div>
                   
-                  {/* AI Summary */}
+                  {/* Creator 2 - James Welsh */}
+                  <div className="grid grid-cols-4 gap-4 p-4 bg-yellow-50 rounded-xl border-l-4 border-yellow-400">
+                    <div className="flex items-center gap-2">
+                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="James Welsh" className="w-8 h-8 rounded-full" />
+                      <span className="font-bold text-yellow-900 text-sm">James Welsh</span>
+                    </div>
+                    <div className="flex items-center">
+                      {[1,2,3].map(i => (
+                        <Star key={i} className="h-3 w-3 fill-yellow-500 text-yellow-500" />
+                      ))}
+                      {[4,5].map(i => (
+                        <Star key={i} className="h-3 w-3 text-gray-300" />
+                      ))}
+                    </div>
+                    <div className="text-yellow-800 text-sm font-medium">"Can be drying"</div>
+                    <div className="flex items-center gap-1">
+                      <Brain className="h-3 w-3 text-purple-600" />
+                      <span className="text-purple-800 text-xs font-medium">Use with moisturizer</span>
+                    </div>
+                  </div>
+                  
+                  {/* Creator 3 - Caroline Hirons */}
+                  <div className="grid grid-cols-4 gap-4 p-4 bg-orange-50 rounded-xl border-l-4 border-orange-400">
+                    <div className="flex items-center gap-2">
+                      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=40&h=40&fit=crop&crop=face" alt="Caroline Hirons" className="w-8 h-8 rounded-full" />
+                      <span className="font-bold text-orange-900 text-sm">Caroline</span>
+                    </div>
+                    <div className="flex items-center">
+                      {[1,2,3].map(i => (
+                        <Star key={i} className="h-3 w-3 fill-orange-500 text-orange-500" />
+                      ))}
+                      {[4,5].map(i => (
+                        <Star key={i} className="h-3 w-3 text-gray-300" />
+                      ))}
+                    </div>
+                    <div className="text-orange-800 text-sm font-medium">"Too strong for sensitive"</div>
+                    <div className="flex items-center gap-1">
+                      <Brain className="h-3 w-3 text-purple-600" />
+                      <span className="text-purple-800 text-xs font-medium">Avoid if sensitive</span>
+                    </div>
+                  </div>
+                  
+                  {/* Overall AI Summary */}
                   <div className="p-6 bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl border-l-4 border-purple-400">
                     <div className="flex items-center gap-3 mb-3">
                       <Brain className="h-5 w-5 text-purple-600" />
-                      <span className="font-bold text-purple-900 text-lg">🤖 AI Summary</span>
+                      <span className="font-bold text-purple-900 text-lg">🤖 Overall AI Summary</span>
                     </div>
                     <div className="text-purple-800 font-medium text-base">
                       Best for oily/combination skin. Start with 2-3 times per week. 

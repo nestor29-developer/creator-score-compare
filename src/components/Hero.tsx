@@ -50,7 +50,10 @@ const Hero = () => {
       
       {/* Login Button - Top Right */}
       <div className="absolute top-6 right-6 z-20">
-        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+        <Button 
+          variant="outline" 
+          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 hover:scale-110 transition-all duration-300 animate-[float_4s_ease-in-out_infinite]"
+        >
           <LogIn className="mr-2 h-4 w-4" />
           Login
         </Button>
