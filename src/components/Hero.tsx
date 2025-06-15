@@ -1,5 +1,5 @@
 
-import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users } from "lucide-react";
+import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -48,6 +48,14 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-24 h-24 bg-green-400/20 rounded-full blur-xl animate-[pulse_3.5s_ease-in-out_infinite_2s]"></div>
       </div>
       
+      {/* Login Button - Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <Button variant="outline" className="border-white/30 text-white hover:bg-white/10 backdrop-blur-sm rounded-full px-6 py-2">
+          <LogIn className="mr-2 h-4 w-4" />
+          Login
+        </Button>
+      </div>
+      
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 pt-20 pb-16">
         <div className="max-w-4xl mx-auto text-center">
@@ -72,16 +80,12 @@ const Hero = () => {
             detailed breakdowns, benefits, ingredients, and reviews - all in one place.
           </p>
           
-          {/* CTA Buttons with enhanced animations */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-[fade-in_2.4s_ease-out]">
+          {/* CTA Button with enhanced animations */}
+          <div className="flex justify-center items-center mb-16 animate-[fade-in_2.4s_ease-out]">
             <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1 animate-pulse hover:animate-none relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <span className="relative z-10">🎉 FREE Beta Access - Join Now!</span>
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform relative z-10" />
-            </Button>
-            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full backdrop-blur-sm hover:scale-105 transition-all duration-300">
-              <PlayCircle className="mr-2 h-5 w-5" />
-              See How AI Works
             </Button>
           </div>
           
