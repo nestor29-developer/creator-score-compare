@@ -1,4 +1,3 @@
-
 import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -55,7 +54,7 @@ const Hero = () => {
       <div className="absolute top-6 right-6 z-20">
         <Button 
           variant="outline" 
-          className="border-white/30 bg-white/10 text-gray-900 hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-500 ease-in-out hover:scale-105 animate-[gentle-float_12s_ease-in-out_infinite]"
+          className="border-white/30 bg-white/10 text-white hover:bg-white/20 backdrop-blur-sm rounded-full px-6 py-2 transition-all duration-500 ease-in-out hover:scale-105 animate-[gentle-float_20s_ease-in-out_infinite]"
         >
           <LogIn className="mr-2 h-4 w-4" />
           Login
@@ -63,7 +62,7 @@ const Hero = () => {
       </div>
       
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 pt-20 pb-16">
+      <div className="relative z-10 container mx-auto px-4 pt-8 pb-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* Animated Badge */}
           <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/20 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -81,9 +80,14 @@ const Hero = () => {
           </h1>
           
           {/* Subheadline */}
-          <p className={`text-xl md:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <p className={`text-xl md:text-2xl text-white/80 mb-4 max-w-3xl mx-auto leading-relaxed transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Skip the endless research! Our advanced AI analyzes creator recommendations and gives you 
             detailed breakdowns, benefits, ingredients, and reviews - all in one place.
+          </p>
+          
+          {/* Enhanced text about making better decisions */}
+          <p className={`text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed transition-all duration-1000 delay-900 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            Make smarter purchasing decisions with confidence. Trust verified creator insights and AI-powered analysis to discover products that truly deliver results.
           </p>
           
           {/* CTA Button with enhanced animations */}
