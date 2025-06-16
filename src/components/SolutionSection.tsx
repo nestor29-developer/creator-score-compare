@@ -17,13 +17,13 @@ const SolutionSection = () => {
           <div className={`text-center mb-16 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Search & Filter Through Our
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> AI-Analyzed Database</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Advanced AI Database</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
-              Browse thousands of pre-analyzed creator product reviews instantly. No more watching hours of videos or reading endless reviews.
+              Browse pre-analyzed creator product reviews instantly. No more watching hours of videos or reading endless reviews.
             </p>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Our advanced AI has already processed creator insights and organized them into a searchable database for smarter purchasing decisions.
+              Our powerful AI technology has already processed creator insights and organized them into a searchable database for smarter purchasing decisions.
             </p>
           </div>
           
@@ -200,8 +200,8 @@ const SolutionSection = () => {
                   <Brain className="h-6 w-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-semibold text-purple-900 mb-2">Pre-Analyzed Database</h3>
-                  <p className="text-purple-700">Access our comprehensive database where AI has already processed and organized creator insights</p>
+                  <h3 className="text-lg font-semibold text-purple-900 mb-2">Advanced AI Analysis</h3>
+                  <p className="text-purple-700">Access our comprehensive database where powerful AI has already processed and organized creator insights</p>
                 </div>
               </div>
               
@@ -211,7 +211,7 @@ const SolutionSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-green-900 mb-2">Instant Search</h3>
-                  <p className="text-green-700">No more watching hours of videos. Search and filter through thousands of pre-analyzed products instantly</p>
+                  <p className="text-green-700">No more watching hours of videos. Search and filter through pre-analyzed products instantly</p>
                 </div>
               </div>
             </div>
@@ -228,8 +228,8 @@ const SolutionSection = () => {
                   Time Saved on Product Discovery
                 </h3>
                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
-                  Join thousands of smart shoppers who've revolutionized how they discover products from creators. 
-                  Browse our AI-powered database that saves you hours of research.
+                  Join smart shoppers who've revolutionized how they discover products from creators. 
+                  Browse our advanced AI-powered database that saves you hours of research.
                 </p>
                 <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 px-6 md:px-8 py-3 md:py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1">
                   Start Browsing Now

@@ -57,12 +57,12 @@ const Hero = () => {
           {/* Animated Badge with slower gentle bounce */}
           <div className={`inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-3 md:px-4 py-2 mb-6 md:mb-8 border border-white/20 transition-all duration-1000 animate-[gentle-bounce_6s_ease-in-out_infinite] ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <TrendingUp className="h-3 w-3 md:h-4 md:w-4 text-yellow-300 animate-pulse" />
-            <span className="text-white/90 text-xs md:text-sm font-medium">🚀 Thousands of Pre-Analyzed Products</span>
+            <span className="text-white/90 text-xs md:text-sm font-medium">🚀 Advanced AI-Powered Database</span>
           </div>
           
           {/* Main Headline with staggered animation */}
           <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight px-2">
-            <span className={`block transition-all duration-1000 delay-200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Browse Thousands of</span>
+            <span className={`block transition-all duration-1000 delay-200 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>Browse Advanced</span>
             <span className={`block bg-gradient-to-r from-yellow-300 to-orange-400 bg-clip-text text-transparent transition-all duration-1000 delay-400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               AI-Analyzed
             </span>
@@ -72,7 +72,7 @@ const Hero = () => {
           {/* Subheadline */}
           <p className={`text-base md:text-xl lg:text-2xl text-white/80 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed px-4 transition-all duration-1000 delay-800 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             Skip the endless research! Browse our comprehensive database of creator recommendations 
-            with detailed breakdowns, benefits, ingredients, and reviews - all pre-analyzed by advanced AI.
+            with detailed breakdowns, benefits, ingredients, and reviews - all pre-analyzed by powerful AI technology.
           </p>
           
           {/* CTA Button with enhanced animations */}
@@ -90,8 +90,8 @@ const Hero = () => {
               <div className="w-8 h-8 md:w-6 md:h-6 bg-yellow-400/20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-2">
                 <Brain className="h-4 w-4 md:h-3 md:w-3 text-yellow-300" />
               </div>
-              <div className="text-base md:text-sm font-semibold text-white mb-2 md:mb-1">AI-Powered Database</div>
-              <div className="text-white/70 text-sm md:text-xs leading-relaxed">Advanced AI has pre-analyzed thousands of creator reviews and recommendations</div>
+              <div className="text-base md:text-sm font-semibold text-white mb-2 md:mb-1">Advanced AI Database</div>
+              <div className="text-white/70 text-sm md:text-xs leading-relaxed">Powerful AI has pre-analyzed creator reviews and recommendations</div>
             </div>
             
             <div className={`text-center p-4 md:p-3 bg-white/5 backdrop-blur-sm rounded-lg hover:bg-white/10 transition-all duration-700 hover:scale-105 animate-[gentle-float_60s_ease-in-out_infinite_12s] delay-1400 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
