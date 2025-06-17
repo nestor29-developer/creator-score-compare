@@ -1,4 +1,3 @@
-
 import { ArrowRight, PlayCircle, Star, TrendingUp, Sparkles, Brain, Users, LogIn, Shield, Zap, Target, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useIntersectionObserver } from "@/hooks/useIntersectionObserver";
@@ -13,6 +12,17 @@ const Hero = () => {
         <div className="absolute inset-0 opacity-40" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
         }}></div>
+      </div>
+      
+      {/* Login Button - Top Right */}
+      <div className="absolute top-6 right-6 z-20">
+        <Button 
+          className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border border-white/20 px-6 py-2 rounded-full transition-all duration-300 hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl animate-pulse hover:animate-none relative overflow-hidden group"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <LogIn className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform duration-300 relative z-10" />
+          <span className="relative z-10">Login</span>
+        </Button>
       </div>
       
       {/* Floating AI-themed elements with much slower movement - hidden on mobile for performance */}
