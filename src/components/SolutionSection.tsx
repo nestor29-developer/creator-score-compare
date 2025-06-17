@@ -17,13 +17,13 @@ const SolutionSection = () => {
           <div className={`text-center mb-16 transition-all duration-1000 ${hasIntersected ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Search & Filter Through Our
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Advanced AI Smart Product Archive</span>
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Advanced AI Knowledge Hub</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
               Browse pre-analyzed creator product reviews instantly. No more watching hours of videos or reading endless reviews.
             </p>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-              Our powerful AI technology has already processed creator insights and organized them into a searchable Smart Product Archive for smarter purchasing decisions.
+              Our powerful AI technology has already processed creator insights and organized them into a searchable Knowledge Hub for smarter purchasing decisions.
             </p>
           </div>
           
@@ -191,7 +191,7 @@ const SolutionSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-blue-900 mb-2">Browse Multiple Creators</h3>
-                  <p className="text-blue-700">Search through our Smart Product Archive of creator reviews with detailed pros, cons, and recommendations</p>
+                  <p className="text-blue-700">Search through our Knowledge Hub of creator reviews with detailed pros, cons, and recommendations</p>
                 </div>
               </div>
               
@@ -201,7 +201,7 @@ const SolutionSection = () => {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-purple-900 mb-2">Advanced AI Analysis</h3>
-                  <p className="text-purple-700">Access our comprehensive Smart Product Archive where powerful AI has already processed and organized creator insights</p>
+                  <p className="text-purple-700">Access our comprehensive Knowledge Hub where powerful AI has already processed and organized creator insights</p>
                 </div>
               </div>
               
@@ -229,7 +229,7 @@ const SolutionSection = () => {
                 </h3>
                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
                   Join smart shoppers who've revolutionized how they discover products from creators. 
-                  Browse our advanced AI-powered Smart Product Archive that saves you hours of research.
+                  Browse our advanced AI-powered Knowledge Hub that saves you hours of research.
                 </p>
                 <Button size="lg" className="bg-white text-purple-700 hover:bg-white/90 px-6 md:px-8 py-3 md:py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 hover:-translate-y-1">
                   Start Browsing Now
